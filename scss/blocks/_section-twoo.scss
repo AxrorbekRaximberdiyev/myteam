@@ -1,0 +1,127 @@
+#twoo {
+  h2,h3,p {
+    margin: 0;
+    padding: 0;
+
+  }
+  background-image: url("/img/afterbg.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-color: $darkGreen;
+  .manage-block {
+    display: flex;
+    padding-top: 140px;
+    padding-bottom: 140px;
+    .manage__title {
+      width: 445px;
+      .manage__line {
+        width: 50px;
+        height: 4px;
+        background-color: $lightCoral;
+        margin-bottom: 54px;
+      }
+      .manage__header{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 48px;
+        color: $white;
+      }
+    }
+    .manage__inner {
+      margin-left: 122px;
+      .manage__item {
+        width: 520px;
+        display: flex;
+        margin-top: 36px;
+        .manage-list__text{
+          margin-left: 23px;
+          .list-text__direction {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 28px;
+            color: $lightCoral;
+          }
+          .list-text__data{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 25px;
+            color: $white;
+            mix-blend-mode: normal;
+            opacity: 0.8;
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint-down (1000px) {
+    .manage-block {
+      display: block;
+      width: 573px;
+      margin-left: auto;
+      margin-right: auto;
+      .manage__title {
+        .manage__header {
+          font-size: 32px;
+          line-height: 32px;
+        }
+      }
+      .manage__inner {
+        margin-left: 0;
+        padding-left: 0;
+      }
+    }
+  }
+  @include breakpoint-down (575.9px) {
+    background-position: top right;
+    .manage-block{
+      width: 100%;
+      display: block;
+      padding-left: 9px;
+      padding-right: 9px;
+      padding-top: 64px;
+      padding-bottom: 64px;
+      .manage__title {
+        width: 100%;
+        .manage__header {
+          width: 80%;
+          height: 196px;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 32px;
+          line-height: 32px;
+        }
+      }
+      .manage__inner {
+        width: 100%;
+        padding: 0;
+        margin-left: 0;
+        .manage__item {
+          text-align: center;
+          width: 100%;
+          display: block;
+          .manage-list__img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .manage-list__text {
+            display: block;
+            margin-left: 0;
+            .list-text__data {
+              font-style: normal;
+              font-weight: 600;
+              font-size: 15px;
+              line-height: 25px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

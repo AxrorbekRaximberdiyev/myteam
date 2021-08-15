@@ -1,0 +1,69 @@
+#four {
+  h2  {
+    margin: 0;
+  }
+  background: {
+    color: $lightCoral;
+    image: url("/img/Group99.svg");
+    repeat: no-repeat;
+    position: bottom left;
+  };
+  .ready-block {
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 70px;
+    padding-right: 70px;
+
+    .ready__header {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 48px;
+      color: #012F34;
+    }
+    .ready__btn {
+      @include site-btn;
+      border: 2px solid $sacramentoGreen;
+      box-sizing: border-box;
+      border-radius: 24px;
+      color: $sacramentoGreen;
+      transition: all .3s linear;
+      &:hover{
+        background-color: $sacramentoGreen;
+        color: $white;
+      }
+      &:active{
+        color: $sacramentoGreen;
+        background-color: transparent;
+      }
+    }
+  }
+  @include breakpoint-down (1000px) {
+    .ready-block {
+      .ready__header {
+        width: 60%;
+        font-size: 32px;
+        line-height: 32px;
+      }
+    }
+  }
+  @include breakpoint-down (575.9px) {
+    .ready-block {
+      display: block;
+      height: 302px;
+      padding-top: 83px;
+      padding-left: 9px;
+      padding-right: 9px;
+      text-align: center;
+      .ready__header {
+        width: 100%;
+        font-size: 32px;
+        line-height: 32px;
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+}

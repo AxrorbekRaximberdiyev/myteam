@@ -1,0 +1,133 @@
+
+#header-block {
+  background-color: $midnightGreen;
+  .navigation {
+    display: flex;
+    padding-top: 77px;
+    padding-bottom: 133px;
+    align-items: center;
+    .navigation__brand{
+      display: inline-block;
+      img{
+        transform: translateY(3px);
+        margin-bottom: 0!important;
+      }
+    }
+    .navigation__navbar{
+      margin-right: auto;
+      .navbar__inner {
+        @include reset-list;
+        display: flex;
+        margin-left: 80px;
+        .navbar__item{
+          margin-left: 40px;
+          position: relative;
+          &:nth-child(1){
+            margin-left: 0;
+          }
+          .navbar__link{
+            color: $white;
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            &::before {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              height: 3px;
+              width: 100%;
+              background-color: $lightCoral;
+              transform: scaleX(0);
+              transform-origin: center;
+              transition: all .2s linear;
+
+            }
+            &:hover {
+              color: $lightCoral;
+            }
+            &:hover::before {
+              transform: scaleX(1);
+              transform-origin: center;
+            }
+            &:active{
+              color: red;
+            }
+            &:active::before {
+              background-color: red;
+            }
+          }
+        }
+      }
+    }
+    .navbar__btn{
+      @include site-btn;
+      border: 2px solid #FFFFFF;
+      text-decoration: none;
+      box-sizing: border-box;
+      border-radius: 24px;
+      color: $white;
+      transition: all .3s linear;
+      &:hover{
+        background-color: $white;
+        color: $darkGreen;
+      }
+      &:active{
+        color: $white;
+        background-color: transparent;
+      }
+    }
+    .navigation__hamburger-btn{
+      display: none;
+    }
+  }
+
+  @include breakpoint-down (1000px) {
+    .navigation {
+      padding-top: 77px;
+      padding-bottom: 112px!important;
+      padding-left: 24px!important;
+      padding-right: 24px!important;
+      .navigation__brand {
+        width: 127px;
+        height: 32px;
+      }
+      .navbar__inner {
+        margin-left: 48px!important;
+      }
+      .navbar__btn {
+        padding: 8px 24px!important;
+      }
+    }
+
+  }
+  @include breakpoint-down (575.9px) {
+    .navigation {
+      padding-left: 9px!important;
+      padding-right: 9px!important;
+      padding-top: 48px!important;
+      padding-bottom: 80px!important;
+    }
+    .navigation__brand {
+      width: 128px;
+      height: 32px;
+      margin-right: auto;
+    }
+    .navigation__navbar {
+      display: none;
+    }
+    .navbar__btn {
+      display: none;
+    }
+    .navigation__hamburger-btn {
+      display: inline-block!important;
+      background-color: transparent;
+      border: none;
+      transform: translateY(3px);
+    }
+
+  }
+
+}
