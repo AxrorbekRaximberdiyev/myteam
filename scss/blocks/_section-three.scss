@@ -1,12 +1,13 @@
+
 #three {
   //background-color:;
   //background-image: ;
-background: {
-  color:  $midnightGreen;
-  image: url("/img/Groupp.svg"), url("/img/Group89.svg");
-  repeat: no-repeat;
-  position: bottom right, top left;
-};
+  background: {
+    color:  $midnightGreen;
+    image: url("/img/Groupp.svg"), url("/img/Group89.svg");
+    repeat: no-repeat;
+    position: bottom right, top left;
+  };
   h2,h3,p, ul{
     margin: 0;
     padding: 0;

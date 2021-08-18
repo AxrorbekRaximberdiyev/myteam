@@ -12,7 +12,6 @@
   background-color: transparent;
 }
 
-// Psevdoelementdagi uchburchak
 
 @mixin triangle ($direction, $size: 15px, $color: black) {
   display: inline-block;
@@ -59,3 +58,8 @@
     @content;
   }
 }
+
+
+
+
+

@@ -1,0 +1,242 @@
+// MEET
+.meet {
+  padding: 140px 0;
+  background: {
+    image: url("/img/dick1.svg"),url("/img/dick2.svg");
+    repeat: no-repeat no-repeat;
+    position: top left, bottom right;
+    color: #004047;
+  };
+}
+
+.meet__title {
+  //@include title-reset;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 64px;
+}
+
+.meet__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+.meet__item {
+  position: relative;
+  width: 31%;
+  margin-bottom: 48px;
+  background-color: transparent;
+}
+.meet__item~.meet__item{
+  margin-left: 30px;
+}
+
+.meet__item:nth-child(4){
+  margin-left: 0;
+}
+.meet__hover {
+  box-shadow: 0 0 10px #000;
+  height: 281px;
+  color: white;
+  background-color: #012F34;
+}
+
+.meet__item:hover .meet__hover {
+  //padding-top: 20px;
+  transform: rotateY(180deg);
+}
+
+.meet__item:hover .meet__hover .meet__face {
+  background-color: transparent;
+  img {
+    opacity: 0;
+  }
+  .meet__one-title{
+    opacity: 0;
+  }
+  i{
+    opacity: 0;
+  }
+  .meet__span {
+    opacity: 0;
+  }
+}
+
+.meet__item:hover .meet__hover .meet__back {
+  display: block;
+  .title {
+    opacity: 1;
+    color: white;
+  }
+  blockquote {
+    opacity: 1;
+  }
+  .span{
+    opacity: 1;
+    transform: rotate(45deg) translateX(-17px) translateY(15px);
+    background-color: #79C8C7;
+  }
+  div{
+    opacity: 1;
+    a:hover svg path {
+      fill: #F67E7E;
+    }
+  }
+}
+
+.meet__face {
+  position: relative;
+  padding: 32px 24px 56px 24px;
+  text-align: center;
+  // display: none;
+  img {
+    //transition: all 1s ease-in;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+  }
+  .meet__one-title {
+    //transition: all 1s ease-in;
+    display: block;
+    //@include title-reset;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #79C8C7;
+  }
+  i {
+    //transition: all 1s ease-in;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    display: block;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .meet__span {
+    //transition: all 1s ease-in;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    background-color: #F67E7E;
+    text-align: center;
+    font-size: 30px;
+  }
+}
+
+.meet__back {
+  position: relative;
+  top: 0;
+  // display: none;
+  padding: 12px 12px 45px 12px;
+  transform: rotateY(180deg) translateY(-100%);
+  text-align: center;
+  .title {
+    //transition: all 1s ease-in;
+    font-size: 18px;
+    opacity: 0;
+    margin-bottom: 8px;
+    line-height: 28px;
+    color: #79C8C7;
+  }
+  blockquote {
+    //transition: all 1s ease-in;
+    //@include text-reset;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    //color: $white;
+    opacity: 0;
+    margin-bottom: 24px;
+  }
+  .span {
+    //transition: all 1s ease-in;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    opacity: 0;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    //background-color: $lightCoral;
+    text-align: center;
+    font-size: 30px;
+  }
+  div{
+    //transition: all 1s ease-in;
+    opacity: 0;
+  }
+}
+
+@include breakpoint-down(1000px) {
+  .meet {
+    padding: 100px 0;
+    background-position: calc(50% + 360px) bottom, calc(50% - 360px) top;
+  }
+  .meet__list {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .meet__item {
+    position: relative;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px;
+    background-color: transparent;
+  }
+  .meet__item~.meet__item{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .meet__item:nth-child(4){
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@include breakpoint-down(568px) {
+  .meet {
+    padding: 100px 0;
+    background-position: calc(50% + 200px) bottom, calc(50% - 250px) -90px;
+  }
+  .meet__list {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .meet__back {
+    padding: 12px 8px 30px 8px;
+  }
+  .meet__item {
+    position: relative;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px;
+    background-color: transparent;
+  }
+  .meet__item~.meet__item{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .meet__item:nth-child(4){
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

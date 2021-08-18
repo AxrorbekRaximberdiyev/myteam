@@ -1,0 +1,60 @@
+
+
+.client {
+  padding: 140px 0;
+  background-image: url("/img/clients-bg.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.main__client {
+  background-color: #012F34;
+}
+
+.client__title {
+  //@include title-reset;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 64px;
+}
+
+.client__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    text-decoration: none;
+  }
+}
+
+@include breakpoint-down(1000px) {
+  .client__item {
+    img {
+      width: 100px;
+      height: 17px;
+    }
+  }
+}
+
+@include breakpoint-down(568px){
+  .client {
+    padding: 88px 0;
+    background-position: calc(50% - 200px)-90px;
+  }
+  .client__list {
+    flex-direction: column;
+  }
+  .client__item {
+    margin-bottom: 40px;
+    img {
+      width: 146px;
+      height: 24px;
+    }
+  }
+}

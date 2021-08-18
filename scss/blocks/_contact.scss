@@ -1,0 +1,135 @@
+.main__form {
+  background: {
+    color: #014E56;
+    image: url("/img/Grou.svg"), url("/img/songi.svg");
+    repeat: no-repeat, no-repeat;
+    position: top left, bottom right;
+  };
+  h2,h3,p{
+    margin: 0;
+    padding: 0!important;
+  }
+  .form-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 128px;
+    text-align: center;
+
+  }
+  .main__one {
+    .main__title {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 64px;
+      line-height: 100px;
+      color: #FFFFFF;
+    }
+    .main__small {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 48px;
+      color: #F67E7E;
+      margin-bottom: 32px;
+    }
+
+    .main__list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      .contact-list__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        .contact-item__text {
+          margin-left: 23px;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 28px;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+
+  form {
+    .form__control {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid white;
+      width: 540px;
+      padding-bottom: 16px;
+      padding-top: 24px;
+      color: white;
+    }
+    textarea {
+      padding-bottom: 58px!important;
+    }
+    .form__btn {
+      padding: 10px 32px;
+      background: #FFFFFF;
+      border: 2px solid #FFFFFF;
+      box-sizing: border-box;
+      border-radius: 24px;
+      margin-top: 33px;
+    }
+  }
+  @include breakpoint-down(1000px){
+    .form-control {
+      display: block;
+      padding-left: 115px;
+      padding-right: 9px;
+      text-align: left;
+    }
+    .main__one {
+      h2, h3 {
+        //text-align: center;
+      }
+      .main__list {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .main__two {
+      form {
+        width: 100%;
+        margin-left: -100px;
+      }
+      width: 100%;
+      .form__control {
+        max-width: 100%;
+      }
+    }
+  }
+  }
+  @include breakpoint-down(576px) {
+    .main__form {
+      background-image: none, url("../../img/songi.svg");
+      padding-bottom: 88px;
+    }
+    .form-control {
+      display: block;
+      padding-left: 9px!important;
+      padding-right: 9px!important;
+    }
+    .main__one {
+      h2, h3 {
+        text-align: center;
+      }
+
+
+    }
+    .main__two {
+      width: 100%;
+      .form__control {
+        max-width: 100%;
+      }
+    }
+
+  }
+
